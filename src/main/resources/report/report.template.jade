@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Phone report
+    style
+      include css/bootstrap.css
+
+    script
+      include js/bootstrap.bundle.js
+
+  body
+    div.container.my-5
+      h2 Phone report
+
+      table.table.table-striped
+        thead
+          tr
+            th(scope='row') Model
+            th(scope='row') Jack
+            th(scope='row') Grade
+            th(scope='row') Release Date
+            th(scope='row') Phone review URL
+            th(scope='row') Launch price
+            th(scope='row') Amazon link
+        tbody
+          for phone in phones
+            tr
+              td #{phone.model}
+              if phone.jack
+                td ✅
+              else
+                td ❌
+              td #{phone.grade}
+              td #{phone.releaseDate}
+              td
+                a(href="#{phone.url}", target="blank") link
+              td #{phone.price}
+              td
+                a(href="https://www.amazon.it/s?k=#{phone.model}", target="blank") Amazon
