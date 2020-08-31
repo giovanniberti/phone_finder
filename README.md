@@ -31,3 +31,5 @@ git clone https://github.com/giovanniberti/phone_finder
 ```sh
 ./gradlew runShadow
 ```
+The program will generate an HTML report in the repo root called `report.html`.
+Dynamic filtering is not currently available (and neither planned), but filtering rules can be easily changed in `ReportGenerator.kt::main`
