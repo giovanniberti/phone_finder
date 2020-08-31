@@ -1,5 +1,6 @@
 # phone_finder
 
+![](screenshot.png)
 
 ## Table of Contents
 
